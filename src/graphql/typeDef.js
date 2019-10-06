@@ -55,6 +55,7 @@ module.exports = gql`
 	type Game {
 		id: Int!
 		name: String!
+		url:String!
 		price: Float!
 		about:About
 		specification:Specification
@@ -68,8 +69,8 @@ module.exports = gql`
 		name: String!
 		price: Float!
 		url: String!
-		about:AboutInput!
-		specification:SpecificationInput!
+		about:AboutInput
+		specification:SpecificationInput
 		additionalFeature:String
 		languageSupport:String
 	}
@@ -77,6 +78,7 @@ module.exports = gql`
 	type Query {
 		getGame(name: String!): Game
 		getGames: [Game]
+		getGamesPage(limit:Int ,skip:Int ): [Game]
 	}
 
 	type Mutation {

@@ -12,6 +12,6 @@ mongoose.connect('mongodb+srv://hawk:11111@cluster-dclbe.mongodb.net/hawk-games'
 );
 
 
-server.listen(5000, () => {
-	console.log('Server Running At http://localhost:5000')
+server.listen(1215, () => {
+	console.log('Server Running At http://localhost:1215')
 })

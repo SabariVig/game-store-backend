@@ -12,6 +12,13 @@ module.exports = {
 			const game = await Game.findOne({ name })
 			console.log(game)
 			return (game)
+		},
+
+
+		async getGamesPage(_, { limit,skip }) {
+			const game = await Game.find().limit(3).skip(skip)
+			console.log(game)
+			return (game)
 		}
 	},
 	Mutation: {

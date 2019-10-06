@@ -6,6 +6,7 @@ const Game = mongoose.Schema(
 		name: String,
 		price: Number,
 		about: Mixed,
+		url:String,
 		specification:Mixed
 	},
 	{ strict: false }
