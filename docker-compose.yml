@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  hawk-game-store:
+    image: hawk-game-store
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 1215:1215

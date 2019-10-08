@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  hawk-game-store:
+    image: hawk-game-store
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 1215:1215
+      - 9229:9229
+    ## set your startup file here
+    command: node --inspect=0.0.0.0:9229 index.js
