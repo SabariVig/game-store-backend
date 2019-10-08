@@ -7,6 +7,11 @@ module.exports = {
 			console.log(game)
 			return game
 		},
+		async getGamesSize() {
+			const game = await Game.count({})
+			// console.log(game)
+			return game
+		},
 
 		async getGame(_, { name }) {
 			const game = await Game.findOne({ name })
@@ -17,7 +22,9 @@ module.exports = {
 
 		async getGamesPage(_, { limit,skip }) {
 			const game = await Game.find().limit(3).skip(skip)
-			console.log(game)
+			// console.log(game)
+			const lol= await Game.count({})
+			console.log(lol)
 			return (game)
 		}
 	},

@@ -61,6 +61,7 @@ module.exports = gql`
 		specification:Specification
 		additionalFeature:String
 		languageSupport:String
+		hasMore:Boolean
 		
 	}
 
@@ -79,6 +80,7 @@ module.exports = gql`
 		getGame(name: String!): Game
 		getGames: [Game]
 		getGamesPage(limit:Int ,skip:Int ): [Game]
+		getGamesSize:Int!
 	}
 
 	type Mutation {
